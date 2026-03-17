@@ -1,5 +1,6 @@
 package com.lele.aicodemonther.service;
 
+import com.lele.aicodemonther.model.dto.app.AppAddRequest;
 import com.lele.aicodemonther.model.dto.app.AppQueryRequest;
 import com.lele.aicodemonther.model.entity.User;
 import com.lele.aicodemonther.model.vo.AppVO;
@@ -62,4 +63,6 @@ public interface AppService extends IService<App> {
     String deployApp(Long appId, User loginUser);
 
     void generateAppScreenshotAsync(Long appId, String appDepLoyUrl);
+
+    Long createApp(AppAddRequest appAddRequest, User loginUser);
 }
